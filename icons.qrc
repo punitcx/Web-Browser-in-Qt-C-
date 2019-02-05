@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>forwardp.png</file>
+        <file>backp.png</file>
+        <file>loading.gif</file>
+        <file>upp.png</file>
+        <file>downp.png</file>
+    </qresource>
+</RCC>

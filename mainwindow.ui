@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>530</width>
+    <height>502</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>530</width>
+    <height>502</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>530</width>
+    <height>502</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>530</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Tab"/>
+    <addaction name="actionNew_Window"/>
+    <addaction name="actionNew_Private_Window"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpenFile"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_Page_As"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint_Preview"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelect_All"/>
+    <addaction name="separator"/>
+    <addaction name="actionFind_Replace"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuPage_Look">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Page Look</string>
+     </property>
+     <addaction name="actionNo_Style"/>
+     <addaction name="actionBasic"/>
+    </widget>
+    <widget class="QMenu" name="menuZoom">
+     <property name="title">
+      <string>Zoom</string>
+     </property>
+     <addaction name="actionZoom_In"/>
+     <addaction name="actionZoom_Out"/>
+     <addaction name="separator"/>
+     <addaction name="actionReset"/>
+    </widget>
+    <addaction name="actionToolbars"/>
+    <addaction name="actionSidebars"/>
+    <addaction name="separator"/>
+    <addaction name="menuZoom"/>
+    <addaction name="menuPage_Look"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoom_Text_Only"/>
+    <addaction name="actionFull_Screen"/>
+   </widget>
+   <widget class="QMenu" name="menuHistory">
+    <property name="title">
+     <string>History</string>
+    </property>
+    <addaction name="actionShow_History"/>
+    <addaction name="actionClear_Recent_History"/>
+    <addaction name="separator"/>
+    <addaction name="actionRestore_Previous_Session"/>
+    <addaction name="actionRecently_Closed_Tabs"/>
+   </widget>
+   <widget class="QMenu" name="menuBookmarks">
+    <property name="title">
+     <string>Bookmarks</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <widget class="QMenu" name="menuSpecial_Tools">
+     <property name="title">
+      <string>Special Tools</string>
+     </property>
+     <addaction name="actionScheduled_Shutdown_Timer"/>
+     <addaction name="actionIP_Finder"/>
+     <addaction name="actionTake_Screenshot"/>
+     <addaction name="actionTransparent_View"/>
+     <addaction name="actionVirtual_Keyboard"/>
+    </widget>
+    <widget class="QMenu" name="menuWeb_Developer">
+     <property name="title">
+      <string>Web Developer</string>
+     </property>
+     <addaction name="actionPage_Source"/>
+     <addaction name="actionWeb_Console"/>
+    </widget>
+    <addaction name="actionDownloads"/>
+    <addaction name="separator"/>
+    <addaction name="actionEnable_Free_Page_Editor"/>
+    <addaction name="separator"/>
+    <addaction name="menuWeb_Developer"/>
+    <addaction name="menuSpecial_Tools"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="separator"/>
+    <addaction name="actionShortcuts"/>
+    <addaction name="separator"/>
+    <addaction name="actionFeedback"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_Aurora"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHistory"/>
+   <addaction name="menuBookmarks"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpenFile">
+   <property name="text">
+    <string>Open File</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionNew_Tab">
+   <property name="text">
+    <string>New Tab</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionNew_Window">
+   <property name="text">
+    <string>New Window</string>
+   </property>
+  </action>
+  <action name="actionFull_Screen">
+   <property name="text">
+    <string>Full Screen</string>
+   </property>
+  </action>
+  <action name="actionVirtual_Keyboard">
+   <property name="text">
+    <string>Virtual-Keyboard</string>
+   </property>
+  </action>
+  <action name="actionDownloads">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Downloads</string>
+   </property>
+  </action>
+  <action name="actionScheduled_Shutdown_Timer">
+   <property name="text">
+    <string>Scheduled Shutdown Timer</string>
+   </property>
+  </action>
+  <action name="actionIP_Finder">
+   <property name="text">
+    <string>IP-Finder</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionFind_Replace">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Find/Replace</string>
+   </property>
+  </action>
+  <action name="actionSelect_All">
+   <property name="text">
+    <string>Select All</string>
+   </property>
+  </action>
+  <action name="actionToolbars">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Toolbar</string>
+   </property>
+  </action>
+  <action name="actionSidebars">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Sidebar</string>
+   </property>
+  </action>
+  <action name="actionNo_Style">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>No-Style</string>
+   </property>
+  </action>
+  <action name="actionBasic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Basic Style</string>
+   </property>
+  </action>
+  <action name="actionZoom_In">
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out">
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Creation Help</string>
+   </property>
+  </action>
+  <action name="actionTour">
+   <property name="text">
+    <string>Creation Tour</string>
+   </property>
+  </action>
+  <action name="actionShortcuts">
+   <property name="text">
+    <string>Creation Shortcuts</string>
+   </property>
+  </action>
+  <action name="actionFeedback">
+   <property name="text">
+    <string>Send Feedback</string>
+   </property>
+  </action>
+  <action name="actionAbout_Aurora">
+   <property name="text">
+    <string>About Creation</string>
+   </property>
+  </action>
+  <action name="actionEnable_Smart_Shortcuts">
+   <property name="text">
+    <string>Enable Smart Shortcuts</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Enable Free Page Editor</string>
+   </property>
+  </action>
+  <action name="actionEnable_Free_Page_Editor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Enable Content Editor</string>
+   </property>
+  </action>
+  <action name="actionView_Source">
+   <property name="text">
+    <string>Page Source</string>
+   </property>
+  </action>
+  <action name="actionPage_Source">
+   <property name="text">
+    <string>Page Source</string>
+   </property>
+  </action>
+  <action name="actionSave_Page_As">
+   <property name="text">
+    <string>Save Page As</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionZoom_Text_Only">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Zoom Text Only</string>
+   </property>
+  </action>
+  <action name="actionShow_History">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show All History</string>
+   </property>
+  </action>
+  <action name="actionNew_Private_Window">
+   <property name="text">
+    <string>New Private Window</string>
+   </property>
+  </action>
+  <action name="actionPrint_Preview">
+   <property name="text">
+    <string>Print Preview</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionClear_Recent_History">
+   <property name="text">
+    <string>Clear Recent History</string>
+   </property>
+  </action>
+  <action name="actionRestore_Previous_Session">
+   <property name="text">
+    <string>Restore Previous Session</string>
+   </property>
+  </action>
+  <action name="actionRecently_Closed_Tabs">
+   <property name="text">
+    <string>Recently Closed Tabs</string>
+   </property>
+  </action>
+  <action name="actionWeb_Console">
+   <property name="text">
+    <string>Web Console</string>
+   </property>
+  </action>
+  <action name="actionTake_Screenshot">
+   <property name="text">
+    <string>Take Screenshot</string>
+   </property>
+  </action>
+  <action name="actionTransparent_View">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Transparent View</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="9"/>
+ <resources/>
+ <connections/>
+</ui>
