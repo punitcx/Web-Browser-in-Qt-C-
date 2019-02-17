@@ -39,4 +39,6 @@ right.addSeparator();
 right.addAction("Inspect Element",this,SIGNAL(inspectelement()),QKeySequence(Qt::CTRL+Qt::SHIFT+Qt::Key_I));
 right.addSeparator();
 right.exec(QCursor::pos());}
+//right menu
 }
+
