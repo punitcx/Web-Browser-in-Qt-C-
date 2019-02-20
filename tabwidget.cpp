@@ -579,7 +579,7 @@ void tabwidget::zoomnormal(bool){
         currentWebView()->setZoomFactor(1);
 }
 void tabwidget::basicstyle(bool){
- //if(1){ ui->actionBasic->setChecked(true);ui->actionNo_Style->setChecked(false);}
+ //if(1){ ui->actionBasic->setChecked(true);ui->actionNo_Style->setChecked(false);To be added.}
 }
 void tabwidget::nostyle(bool){
   //if(1){;ui->actionBasic->setChecked(false);ui->actionNo_Style->setChecked(true);}
