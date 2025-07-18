@@ -5,3 +5,5 @@ This is a simple Chromium based Web Browser made in Qt having extra features suc
 To use the browser,just download the linux executive file 'Creation' from build.
 
 More features to be added soon..
+
+[Update 2025] Currently I'm not working on it since the Qt version used is obsolute now. In the future (and if I work), will mostly replace it completely with newer code.
